@@ -13,11 +13,17 @@ describe('Funcionalidade: Cadastro', () => {
         cy.get('#reg_password') .type('teste@123')
         cy.get(':nth-child(4) > .button') .click()
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)') . should('exist', 'Olá, krystel_kulas69')
-        cy.get('.woocommerce-MyAccount-navigation-link--edit-account > a') .click()
+        cy.get('.woocommerce-MyAccount-navigation-link--edit-account > a').click()
         cy.get('#account_first_name') .type(faker.person.firstName())
         cy.get('#account_last_name') .type(faker.person.lastName())
         cy.get('.woocommerce-Button') .click()
         cy.get('.page-title').should('exist', 'MINHA CONTA')
+    });
+
+    it.only('Deve fazer cadastro com comando customizado', () => {
+        cy.preCadastro(faker.internet.email(), 'teste@123', faker.person.firstName(), faker.person.lastName())
+        cy.get('.page-title').should('exist', 'MINHA CONTA')
+        
     });
     
     it('Deve realizar cadastro com sucesso - Variáveis e erro ao não preecher campos obrigatórios de endereço', () => {
