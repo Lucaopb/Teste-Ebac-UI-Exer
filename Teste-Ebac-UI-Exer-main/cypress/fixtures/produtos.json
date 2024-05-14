@@ -1,0 +1,22 @@
+[
+    {
+        "nomeproduto": "Abominable Hoodie",
+        "tamanho":"XS",
+        "cor": "Blue",
+        "Quantidade": 3
+    },
+    {
+        "nomeproduto": "Aero Daily Fitness Tee",
+        "tamanho":"XS",
+        "cor": "Black",
+        "Quantidade": 2
+
+    },
+    {
+        "nomeproduto": "Strike Endurance Tee",
+        "tamanho":"L",
+        "cor": "Red",
+        "Quantidade": 6
+
+    }
+]
