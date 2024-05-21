@@ -48,9 +48,8 @@ cy.get('#createaccount').click()
 cy.get('#account_password').type('Teste@123')
 cy.get('#payment_method_cod').click()
 cy.get('#terms').click()
-cy.get('#place_order').click()
-cy.get('.woocommerce-error').should('contain', 'O campo "CEP" do endereço de faturamento não é um CEP válido.')
-
+cy.get('#place_order').click( { force:true} )
+cy.get('.woocommerce-error').should('contain', 'pedido feito com sucesso')
 
 });
 })
